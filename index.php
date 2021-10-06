@@ -1,4 +1,6 @@
-<?php ?>
+<?php 
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +11,8 @@
     <title>Ordes Shops</title>
 </head>
 <body>
-    
+   <h1>
+
+   </h1>
 </body>
 </html>
