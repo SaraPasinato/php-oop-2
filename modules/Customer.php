@@ -3,17 +3,18 @@ require_once __DIR__ . '/User.php';
 require_once __DIR__ . '/Date.php';
 
 
-class Customer extends User{
+class Customer extends User {
     
      protected $name;
      protected $surname;
-    // protected Date $day_birth;
+   // protected Date $day_birth;
 
-    public function  __construct($_username,$_email,$_password,$_name,$_surname,$day_birth)
+    public function  __construct($_username,$_email,$_password,$_name,$_surname)
     {
         parent::__construct($_username, $_email, $_password);
         $this->setName($_name);
         $this->setSurname($_surname);
+     
        /*  Insert */
     }
 
@@ -50,5 +51,5 @@ class Customer extends User{
 }
 
 
-$c1= new Customer('saraPasi','pinco@pango.da','pancopinco','Sara','Pasinato',1,2,2021);
+$c1= new Customer('saraPasi','pinco@pango.da','pancopinco','Sara','Pasinato');
 var_dump($c1);
