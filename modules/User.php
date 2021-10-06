@@ -64,3 +64,19 @@
 $user1=new User('saraPasi','pinc@ob.it','panco3456');
 var_dump($user1);
  */
+/* //*debug inline
+$user1=new User('saraPasi','pincob.it','panco3456');
+var_dump($user1);
+ */
+/* //*debug inline
+$user1=new User('saraPasi','pinco@bit','panco3456');
+var_dump($user1);
+ */
+/* //*debug inline
+$user1=new User('Pasi','pinco@b.it','panco');
+var_dump($user1);
+ */
+/* //*debug inline
+$user1=new User('89787','pinco@bit','panco3456');
+var_dump($user1);
+ */
