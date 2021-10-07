@@ -14,8 +14,8 @@ class Date {
          $this->setDay($d,$m,$y);
      }
    /*//? getter */
-    public function getDate(){
-        return $this->date;
+    public function getDay(){
+        return $this->day;
     }
      public function getMonth(){
         return $this->month;
