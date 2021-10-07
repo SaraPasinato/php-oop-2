@@ -2,6 +2,7 @@
 require_once __DIR__ . '/User.php';
 require_once __DIR__ . '/Date.php';
 require_once __DIR__ . '/Address.php';
+require_once __DIR__ . '/CreditCard.php';
 
 
 
@@ -11,8 +12,9 @@ class Customer extends User {
      protected $surname;
      protected $day_birth;
      protected $address;
+     protected $card;
 
-    public function  __construct($_username,$_email,$_password,$_name,$_surname,Date $d ,Address $addr)
+    public function  __construct($_username,$_email,$_password,$_name,$_surname,Date $d ,Address $addr,CreditCard $card)
     {
         
         parent::__construct($_username, $_email, $_password);
@@ -22,6 +24,8 @@ class Customer extends User {
         $this->day_birth=$d;
         //address
         $this->address=$addr;
+        //Credit Card
+        $this->card=$card;
     }
 
      /*//? getter */
@@ -61,7 +65,10 @@ $dC1=new Date(2,10,2022);
 //inline debug Address
 $addr=new Address('via Verdi',4,'Milano','20019');
 
+//inline debug CreditCard
+$cc=new CreditCard('123456789123',$dC1,'SaraPasinato');
+
 //inline debug Customer
-$c1= new Customer('saraPasi','pinco@pango.da','pancopinco','Sara','Pasinato',$dC1,$addr);
+$c1= new Customer('saraPasi','pinco@pango.da','pancopinco','Sara','Pasinato',$dC1,$addr,$cc);
 
 var_dump($c1);
