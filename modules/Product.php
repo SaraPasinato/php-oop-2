@@ -47,10 +47,9 @@ class Product{
             $this->prize=$prz;
         }
     }
+
+    public function renderProduct(){
+        return "\n\n Title: $this->title \n Description: $this->desc \n Prize: $this->prize ";
+    }
     
 }
-
-//inline debug
-$prod1= new Product('libro','parla di cose',12.30,new Category('1','Libri'));
-
-var_dump($prod1);
