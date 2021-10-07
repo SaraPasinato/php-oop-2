@@ -7,7 +7,7 @@ class Date {
     protected $year;
     /*//? contruct */
     
-   public function  __construct($d=1,$m,$y)
+   public function  __construct($d,$m,$y)
      {
          $this->setMonth($m);
          $this->setYear($y);
