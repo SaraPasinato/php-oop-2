@@ -6,11 +6,13 @@ Class ProductList{
   protected $product;
   protected $qta;
   protected $discount;
+  protected $amount;
 
   public function __construct(Product $product,$qta,$discount=0){
     $this->product= $product;
     $this->setQta($qta);
     $this->setDiscount($discount);
+    $this->amount=$this->setAmount($product,$qta,$discount);
   }
 
   public function getQta(){
@@ -18,6 +20,12 @@ Class ProductList{
   }
   public function getDiscount(){
       return $this->discount;
+  }
+  public function getProduct(){
+      return $this->product;
+  }
+  public function getAmount(){
+      return $this->amount;
   }
 
   private function setQta($qta){
@@ -32,6 +40,10 @@ Class ProductList{
             $this->discount=$disc;
         }
   }
+  private function setAmount($prod,$qta,$discount){
+      $tot=$prod->getPrize()*$qta;
+      return $tot - (($tot*$discount)/100);   
+  }
 
   public function renderList(){
     return " Qtà: $this->qta \n Discount: $this->discount\n";
@@ -39,10 +51,14 @@ Class ProductList{
 
   public function  renderListProduct(){
 
-    return $this->product->renderProduct() . "\n Qta : $this->qta \n Sconto: $this->discount";
+    return $this->product->renderProduct() . "   Qta : $this->qta <br/>   Sconto: $this->discount% | Tot: $this->amount €";
      
   }
 
+  public function __toString()
+  {
+      return $this->renderListProduct();
+  }
 }
 
 /* 
@@ -50,5 +66,6 @@ $prod2= new Product('Libro','parla di cose',12.30,new Category('1','Libri'));
 
 $list= new ProductList($prod2,2,10);
 
-var_dump($list->renderListProduct()); */
+var_dump($list->renderListProduct()); 
 
+echo $list; */

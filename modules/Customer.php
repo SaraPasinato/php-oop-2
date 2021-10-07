@@ -56,7 +56,10 @@ class Customer extends User {
         }
     }
  
-   
+    public function __toString()
+    {
+        return "<br/><strong>Cliente </strong> <br/> Nome:   $this->name $this->surname \n ";
+    }
  
 }
 
@@ -71,4 +74,6 @@ $cc=new CreditCard('123456789123',$dC1,'SaraPasinato');
 //inline debug Customer
 $c1= new Customer('saraPasi','pinco@pango.da','pancopinco','Sara','Pasinato',$dC1,$addr,$cc);
 
-var_dump($c1);
+//var_dump($c1);
+
+//echo $c1;

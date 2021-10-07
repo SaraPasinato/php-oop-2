@@ -49,7 +49,11 @@ class Product{
     }
 
     public function renderProduct(){
-        return "\n\n Title: $this->title \n Description: $this->desc \n Prize: $this->prize ";
+        return "<h3>Prodotto</h3>Title: $this->title <br/> Description: $this->desc <br/> Prize: $this->prize  €<br/>";
     }
     
+    public function __toString()
+    {
+        return $this->renderProduct();
+    }
 }

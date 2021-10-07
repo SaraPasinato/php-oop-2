@@ -70,7 +70,10 @@ class Retailer extends User {
         }
     }
  
-   
+    public function __toString()
+    {
+        return "<strong> Venditore </strong> <br/> Nome:   $this->name $this->surname \n ";
+    }
  
 }
 
@@ -85,4 +88,4 @@ $cc=new CreditCard('123456789123',$dR1,'MicheleRossi');
 //inline debug Retailer
 $r1= new Retailer('marketShop','shop@id.it','pancopinco','pinco','panco',12345678912,$dR1,$addr,$cc);
 
-var_dump($r1);
+//var_dump($r1);
