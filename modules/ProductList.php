@@ -61,11 +61,4 @@ Class ProductList{
   }
 }
 
-/* 
-$prod2= new Product('Libro','parla di cose',12.30,new Category('1','Libri'));
 
-$list= new ProductList($prod2,2,10);
-
-var_dump($list->renderListProduct()); 
-
-echo $list; */

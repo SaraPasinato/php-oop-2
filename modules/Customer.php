@@ -63,17 +63,3 @@ class Customer extends User {
  
 }
 
-//inline debug Data
-$dC1=new Date(2,10,2022);
-//inline debug Address
-$addr=new Address('via Verdi',4,'Milano','20019');
-
-//inline debug CreditCard
-$cc=new CreditCard('123456789123',$dC1,'SaraPasinato');
-
-//inline debug Customer
-$c1= new Customer('saraPasi','pinco@pango.da','pancopinco','Sara','Pasinato',$dC1,$addr,$cc);
-
-//var_dump($c1);
-
-//echo $c1;

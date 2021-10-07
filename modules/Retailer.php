@@ -77,15 +77,4 @@ class Retailer extends User {
  
 }
 
-//inline debug Data
-$dR1=new Date(2,10,2022);
-//inline debug Address
-$addr=new Address('via Verdi',4,'Milano','20019');
 
-//inline debug CreditCard
-$cc=new CreditCard('123456789123',$dR1,'MicheleRossi');
-
-//inline debug Retailer
-$r1= new Retailer('marketShop','shop@id.it','pancopinco','pinco','panco',12345678912,$dR1,$addr,$cc);
-
-//var_dump($r1);

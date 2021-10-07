@@ -25,11 +25,3 @@ class Order {
 
 
 }
-
-$prod2= new Product('Libro','parla di cose',12.30,new Category('1','Libri'));
-
-$list= new ProductList($prod2,2,10);
-
-$o1=new Order($c1,$r1,$list);
-
-echo $o1;
